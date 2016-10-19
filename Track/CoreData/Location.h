@@ -1,8 +1,8 @@
 //
-//  Track.h
+//  Location.h
 //  Track
 //
-//  Created by zhe wu on 10/17/16.
+//  Created by zhe wu on 10/19/16.
 //  Copyright © 2016 zhe wu. All rights reserved.
 //
 
@@ -11,7 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface Track : NSManagedObject
+@interface Location : NSManagedObject
 
 // Insert code here to declare functionality of your managed object subclass
 
@@ -19,4 +19,4 @@ NS_ASSUME_NONNULL_BEGIN
 
 NS_ASSUME_NONNULL_END
 
-#import "Track+CoreDataProperties.h"
+#import "Location+CoreDataProperties.h"

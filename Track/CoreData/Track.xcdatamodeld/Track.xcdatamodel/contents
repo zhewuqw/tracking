@@ -1,9 +1,61 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10174" systemVersion="15G31" minimumToolsVersion="Xcode 7.0">
-    <entity name="TrackNumber" representedClassName="Track" syncable="YES">
-        <attribute name="trackingNumber" optional="YES" attributeType="Transformable" syncable="YES"/>
+    <entity name="Address_from" representedClassName="Address_from" syncable="YES">
+        <attribute name="city" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="country" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="state" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="zip" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <entity name="Address_to" representedClassName="Address_to" syncable="YES">
+        <attribute name="city" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="country" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="state" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="zip" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <entity name="Location" representedClassName="Location" syncable="YES">
+        <attribute name="city" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="country" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="state" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="zip" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <entity name="Service_level" representedClassName="Service_level" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="token" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="TrackInfo" representedClassName="TrackInfo" syncable="YES">
+        <attribute name="carrier" attributeType="String" syncable="YES"/>
+        <attribute name="eta" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="tracking_number" attributeType="String" syncable="YES"/>
+        <relationship name="addressFrom" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Address_from" syncable="YES"/>
+        <relationship name="addressTo" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Address_to" syncable="YES"/>
+        <relationship name="serviceLevel" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Service_level" syncable="YES"/>
+        <relationship name="trackingHistory" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Tracking_history" syncable="YES"/>
+        <relationship name="trackingStatus" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Tracking_status" syncable="YES"/>
+    </entity>
+    <entity name="Tracking_history" representedClassName="Tracking_history" syncable="YES">
+        <attribute name="object_created" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="object_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="status_date" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="status_details" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="trackingHistoryLocation" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Location" syncable="YES"/>
+    </entity>
+    <entity name="Tracking_status" representedClassName="Tracking_status" syncable="YES">
+        <attribute name="object_created" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="object_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="object_updated" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="status_date" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="status_details" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="trackingStatusLocation" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Location" syncable="YES"/>
     </entity>
     <elements>
-        <element name="TrackNumber" positionX="-63" positionY="-18" width="128" height="60"/>
+        <element name="TrackInfo" positionX="-378" positionY="3" width="128" height="163"/>
+        <element name="Address_from" positionX="-225" positionY="-207" width="128" height="103"/>
+        <element name="Address_to" positionX="-36" positionY="-135" width="128" height="103"/>
+        <element name="Service_level" positionX="-29" positionY="8" width="128" height="73"/>
+        <element name="Tracking_status" positionX="-38" positionY="108" width="128" height="148"/>
+        <element name="Location" positionX="322" positionY="180" width="128" height="103"/>
+        <element name="Tracking_history" positionX="-29" positionY="315" width="128" height="133"/>
     </elements>
 </model>

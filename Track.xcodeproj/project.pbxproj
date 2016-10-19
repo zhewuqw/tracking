@@ -14,19 +14,35 @@
 		D2ADCD341CD5942900C57F8A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2ADCD331CD5942900C57F8A /* MapKit.framework */; };
 		E98A0C341DB5F4FE00D105D8 /* TrackingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E98A0C331DB5F4FE00D105D8 /* TrackingTableViewCell.m */; };
 		E98A0C3E1DB5F52400D105D8 /* CoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = E98A0C371DB5F52400D105D8 /* CoreDataStack.m */; };
-		E98A0C3F1DB5F52400D105D8 /* Track+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = E98A0C391DB5F52400D105D8 /* Track+CoreDataProperties.m */; };
-		E98A0C401DB5F52400D105D8 /* Track.m in Sources */ = {isa = PBXBuildFile; fileRef = E98A0C3B1DB5F52400D105D8 /* Track.m */; };
 		E98A0C411DB5F52400D105D8 /* Track.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E98A0C3C1DB5F52400D105D8 /* Track.xcdatamodeld */; };
 		E98A0C461DB5F55000D105D8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E98A0C441DB5F55000D105D8 /* AppDelegate.m */; };
 		E98A0C471DB5F55000D105D8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E98A0C451DB5F55000D105D8 /* main.m */; };
+		E9C5ED501DB7445400E8E02C /* Tracking_history+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C5ED391DB7445400E8E02C /* Tracking_history+CoreDataProperties.m */; };
+		E9C5ED511DB7445400E8E02C /* Tracking_history.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C5ED3B1DB7445400E8E02C /* Tracking_history.m */; };
+		E9C5ED521DB7445400E8E02C /* Location+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C5ED3D1DB7445400E8E02C /* Location+CoreDataProperties.m */; };
+		E9C5ED531DB7445400E8E02C /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C5ED3F1DB7445400E8E02C /* Location.m */; };
+		E9C5ED541DB7445400E8E02C /* Service_level+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C5ED411DB7445400E8E02C /* Service_level+CoreDataProperties.m */; };
+		E9C5ED551DB7445400E8E02C /* Service_level.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C5ED431DB7445400E8E02C /* Service_level.m */; };
+		E9C5ED561DB7445400E8E02C /* Address_to+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C5ED451DB7445400E8E02C /* Address_to+CoreDataProperties.m */; };
+		E9C5ED571DB7445400E8E02C /* Address_to.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C5ED471DB7445400E8E02C /* Address_to.m */; };
+		E9C5ED581DB7445400E8E02C /* TrackInfo+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C5ED491DB7445400E8E02C /* TrackInfo+CoreDataProperties.m */; };
+		E9C5ED591DB7445400E8E02C /* TrackInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C5ED4B1DB7445400E8E02C /* TrackInfo.m */; };
+		E9C5ED5A1DB7445400E8E02C /* Address_from+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C5ED4D1DB7445400E8E02C /* Address_from+CoreDataProperties.m */; };
+		E9C5ED5B1DB7445400E8E02C /* Address_from.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C5ED4F1DB7445400E8E02C /* Address_from.m */; };
+		E9EA56051DB6D5040076B3A2 /* Tracking_status+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = E9EA56001DB6D5040076B3A2 /* Tracking_status+CoreDataProperties.m */; };
+		E9EA56061DB6D5040076B3A2 /* Tracking_status.m in Sources */ = {isa = PBXBuildFile; fileRef = E9EA56021DB6D5040076B3A2 /* Tracking_status.m */; };
 		E9FA2AE61DB5F4AD00AC981E /* AddTrackingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9FA2ADF1DB5F4AD00AC981E /* AddTrackingViewController.m */; };
 		E9FA2AE71DB5F4AD00AC981E /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9FA2AE11DB5F4AD00AC981E /* MapViewController.m */; };
-		E9FA2AE81DB5F4AD00AC981E /* settingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9FA2AE31DB5F4AD00AC981E /* settingViewController.m */; };
+		E9FA2AE81DB5F4AD00AC981E /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9FA2AE31DB5F4AD00AC981E /* SettingViewController.m */; };
 		E9FA2AE91DB5F4AD00AC981E /* TrackingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9FA2AE51DB5F4AD00AC981E /* TrackingTableViewController.m */; };
 		E9FA2AED1DB5F4D200AC981E /* TrackingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E9FA2AEC1DB5F4D200AC981E /* TrackingModel.m */; };
+		F304544717D99AA03F70409F /* libPods-Track.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EC3AA0C2A7AAC8C056C295A /* libPods-Track.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		37AF128108316463FC61FDF8 /* Pods-Track.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Track.release.xcconfig"; path = "Pods/Target Support Files/Pods-Track/Pods-Track.release.xcconfig"; sourceTree = "<group>"; };
+		534CC677E9133B05297EF920 /* Pods-Track.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Track.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Track/Pods-Track.debug.xcconfig"; sourceTree = "<group>"; };
+		5EC3AA0C2A7AAC8C056C295A /* libPods-Track.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Track.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D28B6A7D1CDA978400970336 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		D2ADCD131CD58EA200C57F8A /* Track.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Track.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2ADCD201CD58EA200C57F8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -38,20 +54,44 @@
 		E98A0C331DB5F4FE00D105D8 /* TrackingTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrackingTableViewCell.m; sourceTree = "<group>"; };
 		E98A0C361DB5F52400D105D8 /* CoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataStack.h; sourceTree = "<group>"; };
 		E98A0C371DB5F52400D105D8 /* CoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataStack.m; sourceTree = "<group>"; };
-		E98A0C381DB5F52400D105D8 /* Track+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Track+CoreDataProperties.h"; sourceTree = "<group>"; };
-		E98A0C391DB5F52400D105D8 /* Track+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Track+CoreDataProperties.m"; sourceTree = "<group>"; };
-		E98A0C3A1DB5F52400D105D8 /* Track.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Track.h; sourceTree = "<group>"; };
-		E98A0C3B1DB5F52400D105D8 /* Track.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Track.m; sourceTree = "<group>"; };
 		E98A0C3D1DB5F52400D105D8 /* Track.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Track.xcdatamodel; sourceTree = "<group>"; };
 		E98A0C431DB5F55000D105D8 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E98A0C441DB5F55000D105D8 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		E98A0C451DB5F55000D105D8 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E9C5ED381DB7445400E8E02C /* Tracking_history+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Tracking_history+CoreDataProperties.h"; sourceTree = "<group>"; };
+		E9C5ED391DB7445400E8E02C /* Tracking_history+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Tracking_history+CoreDataProperties.m"; sourceTree = "<group>"; };
+		E9C5ED3A1DB7445400E8E02C /* Tracking_history.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tracking_history.h; sourceTree = "<group>"; };
+		E9C5ED3B1DB7445400E8E02C /* Tracking_history.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tracking_history.m; sourceTree = "<group>"; };
+		E9C5ED3C1DB7445400E8E02C /* Location+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Location+CoreDataProperties.h"; sourceTree = "<group>"; };
+		E9C5ED3D1DB7445400E8E02C /* Location+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Location+CoreDataProperties.m"; sourceTree = "<group>"; };
+		E9C5ED3E1DB7445400E8E02C /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
+		E9C5ED3F1DB7445400E8E02C /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
+		E9C5ED401DB7445400E8E02C /* Service_level+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Service_level+CoreDataProperties.h"; sourceTree = "<group>"; };
+		E9C5ED411DB7445400E8E02C /* Service_level+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Service_level+CoreDataProperties.m"; sourceTree = "<group>"; };
+		E9C5ED421DB7445400E8E02C /* Service_level.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Service_level.h; sourceTree = "<group>"; };
+		E9C5ED431DB7445400E8E02C /* Service_level.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Service_level.m; sourceTree = "<group>"; };
+		E9C5ED441DB7445400E8E02C /* Address_to+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Address_to+CoreDataProperties.h"; sourceTree = "<group>"; };
+		E9C5ED451DB7445400E8E02C /* Address_to+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Address_to+CoreDataProperties.m"; sourceTree = "<group>"; };
+		E9C5ED461DB7445400E8E02C /* Address_to.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Address_to.h; sourceTree = "<group>"; };
+		E9C5ED471DB7445400E8E02C /* Address_to.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Address_to.m; sourceTree = "<group>"; };
+		E9C5ED481DB7445400E8E02C /* TrackInfo+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TrackInfo+CoreDataProperties.h"; sourceTree = "<group>"; };
+		E9C5ED491DB7445400E8E02C /* TrackInfo+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TrackInfo+CoreDataProperties.m"; sourceTree = "<group>"; };
+		E9C5ED4A1DB7445400E8E02C /* TrackInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrackInfo.h; sourceTree = "<group>"; };
+		E9C5ED4B1DB7445400E8E02C /* TrackInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrackInfo.m; sourceTree = "<group>"; };
+		E9C5ED4C1DB7445400E8E02C /* Address_from+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Address_from+CoreDataProperties.h"; sourceTree = "<group>"; };
+		E9C5ED4D1DB7445400E8E02C /* Address_from+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Address_from+CoreDataProperties.m"; sourceTree = "<group>"; };
+		E9C5ED4E1DB7445400E8E02C /* Address_from.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Address_from.h; sourceTree = "<group>"; };
+		E9C5ED4F1DB7445400E8E02C /* Address_from.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Address_from.m; sourceTree = "<group>"; };
+		E9EA55FF1DB6D5040076B3A2 /* Tracking_status+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Tracking_status+CoreDataProperties.h"; sourceTree = "<group>"; };
+		E9EA56001DB6D5040076B3A2 /* Tracking_status+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Tracking_status+CoreDataProperties.m"; sourceTree = "<group>"; };
+		E9EA56011DB6D5040076B3A2 /* Tracking_status.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tracking_status.h; sourceTree = "<group>"; };
+		E9EA56021DB6D5040076B3A2 /* Tracking_status.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tracking_status.m; sourceTree = "<group>"; };
 		E9FA2ADE1DB5F4AD00AC981E /* AddTrackingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddTrackingViewController.h; sourceTree = "<group>"; };
 		E9FA2ADF1DB5F4AD00AC981E /* AddTrackingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddTrackingViewController.m; sourceTree = "<group>"; };
 		E9FA2AE01DB5F4AD00AC981E /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		E9FA2AE11DB5F4AD00AC981E /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
-		E9FA2AE21DB5F4AD00AC981E /* settingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = settingViewController.h; sourceTree = "<group>"; };
-		E9FA2AE31DB5F4AD00AC981E /* settingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = settingViewController.m; sourceTree = "<group>"; };
+		E9FA2AE21DB5F4AD00AC981E /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
+		E9FA2AE31DB5F4AD00AC981E /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
 		E9FA2AE41DB5F4AD00AC981E /* TrackingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrackingTableViewController.h; sourceTree = "<group>"; };
 		E9FA2AE51DB5F4AD00AC981E /* TrackingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrackingTableViewController.m; sourceTree = "<group>"; };
 		E9FA2AEB1DB5F4D200AC981E /* TrackingModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrackingModel.h; sourceTree = "<group>"; };
@@ -65,12 +105,30 @@
 			files = (
 				D28B6A7E1CDA978400970336 /* AVFoundation.framework in Frameworks */,
 				D2ADCD341CD5942900C57F8A /* MapKit.framework in Frameworks */,
+				F304544717D99AA03F70409F /* libPods-Track.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		461BEEB98D72E5636140D5A8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5EC3AA0C2A7AAC8C056C295A /* libPods-Track.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A545CAE3684C9408218B56EB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				534CC677E9133B05297EF920 /* Pods-Track.debug.xcconfig */,
+				37AF128108316463FC61FDF8 /* Pods-Track.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		D2ADCD0A1CD58EA200C57F8A = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +136,8 @@
 				D2ADCD141CD58EA200C57F8A /* Products */,
 				D28B6A7D1CDA978400970336 /* AVFoundation.framework */,
 				D2ADCD331CD5942900C57F8A /* MapKit.framework */,
+				A545CAE3684C9408218B56EB /* Pods */,
+				461BEEB98D72E5636140D5A8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -127,10 +187,34 @@
 			children = (
 				E98A0C361DB5F52400D105D8 /* CoreDataStack.h */,
 				E98A0C371DB5F52400D105D8 /* CoreDataStack.m */,
-				E98A0C381DB5F52400D105D8 /* Track+CoreDataProperties.h */,
-				E98A0C391DB5F52400D105D8 /* Track+CoreDataProperties.m */,
-				E98A0C3A1DB5F52400D105D8 /* Track.h */,
-				E98A0C3B1DB5F52400D105D8 /* Track.m */,
+				E9C5ED381DB7445400E8E02C /* Tracking_history+CoreDataProperties.h */,
+				E9C5ED391DB7445400E8E02C /* Tracking_history+CoreDataProperties.m */,
+				E9C5ED3A1DB7445400E8E02C /* Tracking_history.h */,
+				E9C5ED3B1DB7445400E8E02C /* Tracking_history.m */,
+				E9C5ED3C1DB7445400E8E02C /* Location+CoreDataProperties.h */,
+				E9C5ED3D1DB7445400E8E02C /* Location+CoreDataProperties.m */,
+				E9C5ED3E1DB7445400E8E02C /* Location.h */,
+				E9C5ED3F1DB7445400E8E02C /* Location.m */,
+				E9C5ED401DB7445400E8E02C /* Service_level+CoreDataProperties.h */,
+				E9C5ED411DB7445400E8E02C /* Service_level+CoreDataProperties.m */,
+				E9C5ED421DB7445400E8E02C /* Service_level.h */,
+				E9C5ED431DB7445400E8E02C /* Service_level.m */,
+				E9C5ED441DB7445400E8E02C /* Address_to+CoreDataProperties.h */,
+				E9C5ED451DB7445400E8E02C /* Address_to+CoreDataProperties.m */,
+				E9C5ED461DB7445400E8E02C /* Address_to.h */,
+				E9C5ED471DB7445400E8E02C /* Address_to.m */,
+				E9C5ED481DB7445400E8E02C /* TrackInfo+CoreDataProperties.h */,
+				E9C5ED491DB7445400E8E02C /* TrackInfo+CoreDataProperties.m */,
+				E9C5ED4A1DB7445400E8E02C /* TrackInfo.h */,
+				E9C5ED4B1DB7445400E8E02C /* TrackInfo.m */,
+				E9C5ED4C1DB7445400E8E02C /* Address_from+CoreDataProperties.h */,
+				E9C5ED4D1DB7445400E8E02C /* Address_from+CoreDataProperties.m */,
+				E9C5ED4E1DB7445400E8E02C /* Address_from.h */,
+				E9C5ED4F1DB7445400E8E02C /* Address_from.m */,
+				E9EA55FF1DB6D5040076B3A2 /* Tracking_status+CoreDataProperties.h */,
+				E9EA56001DB6D5040076B3A2 /* Tracking_status+CoreDataProperties.m */,
+				E9EA56011DB6D5040076B3A2 /* Tracking_status.h */,
+				E9EA56021DB6D5040076B3A2 /* Tracking_status.m */,
 				E98A0C3C1DB5F52400D105D8 /* Track.xcdatamodeld */,
 			);
 			path = CoreData;
@@ -153,8 +237,8 @@
 				E9FA2ADF1DB5F4AD00AC981E /* AddTrackingViewController.m */,
 				E9FA2AE01DB5F4AD00AC981E /* MapViewController.h */,
 				E9FA2AE11DB5F4AD00AC981E /* MapViewController.m */,
-				E9FA2AE21DB5F4AD00AC981E /* settingViewController.h */,
-				E9FA2AE31DB5F4AD00AC981E /* settingViewController.m */,
+				E9FA2AE21DB5F4AD00AC981E /* SettingViewController.h */,
+				E9FA2AE31DB5F4AD00AC981E /* SettingViewController.m */,
 				E9FA2AE41DB5F4AD00AC981E /* TrackingTableViewController.h */,
 				E9FA2AE51DB5F4AD00AC981E /* TrackingTableViewController.m */,
 			);
@@ -177,9 +261,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D2ADCD2A1CD58EA200C57F8A /* Build configuration list for PBXNativeTarget "Track" */;
 			buildPhases = (
+				AC6722EC7E7087954A1D0CD4 /* [CP] Check Pods Manifest.lock */,
 				D2ADCD0F1CD58EA200C57F8A /* Sources */,
 				D2ADCD101CD58EA200C57F8A /* Frameworks */,
 				D2ADCD111CD58EA200C57F8A /* Resources */,
+				8D45926A95ECAAF3BEB0666B /* [CP] Embed Pods Frameworks */,
+				B47EFD76C5B9723DD59AB079 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -236,23 +323,83 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		8D45926A95ECAAF3BEB0666B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Track/Pods-Track-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AC6722EC7E7087954A1D0CD4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B47EFD76C5B9723DD59AB079 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Track/Pods-Track-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D2ADCD0F1CD58EA200C57F8A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				E98A0C461DB5F55000D105D8 /* AppDelegate.m in Sources */,
+				E9C5ED511DB7445400E8E02C /* Tracking_history.m in Sources */,
+				E9C5ED581DB7445400E8E02C /* TrackInfo+CoreDataProperties.m in Sources */,
 				E9FA2AE91DB5F4AD00AC981E /* TrackingTableViewController.m in Sources */,
+				E9C5ED541DB7445400E8E02C /* Service_level+CoreDataProperties.m in Sources */,
+				E9C5ED531DB7445400E8E02C /* Location.m in Sources */,
+				E9C5ED551DB7445400E8E02C /* Service_level.m in Sources */,
 				E9FA2AE61DB5F4AD00AC981E /* AddTrackingViewController.m in Sources */,
-				E98A0C3F1DB5F52400D105D8 /* Track+CoreDataProperties.m in Sources */,
-				E98A0C401DB5F52400D105D8 /* Track.m in Sources */,
+				E9C5ED501DB7445400E8E02C /* Tracking_history+CoreDataProperties.m in Sources */,
 				E98A0C341DB5F4FE00D105D8 /* TrackingTableViewCell.m in Sources */,
+				E9C5ED5A1DB7445400E8E02C /* Address_from+CoreDataProperties.m in Sources */,
+				E9EA56061DB6D5040076B3A2 /* Tracking_status.m in Sources */,
 				E9FA2AE71DB5F4AD00AC981E /* MapViewController.m in Sources */,
+				E9C5ED521DB7445400E8E02C /* Location+CoreDataProperties.m in Sources */,
+				E9EA56051DB6D5040076B3A2 /* Tracking_status+CoreDataProperties.m in Sources */,
 				E98A0C411DB5F52400D105D8 /* Track.xcdatamodeld in Sources */,
+				E9C5ED5B1DB7445400E8E02C /* Address_from.m in Sources */,
 				E98A0C3E1DB5F52400D105D8 /* CoreDataStack.m in Sources */,
 				E9FA2AED1DB5F4D200AC981E /* TrackingModel.m in Sources */,
 				E98A0C471DB5F55000D105D8 /* main.m in Sources */,
-				E9FA2AE81DB5F4AD00AC981E /* settingViewController.m in Sources */,
+				E9C5ED561DB7445400E8E02C /* Address_to+CoreDataProperties.m in Sources */,
+				E9FA2AE81DB5F4AD00AC981E /* SettingViewController.m in Sources */,
+				E9C5ED571DB7445400E8E02C /* Address_to.m in Sources */,
+				E9C5ED591DB7445400E8E02C /* TrackInfo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,10 +511,17 @@
 		};
 		D2ADCD2B1CD58EA200C57F8A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 534CC677E9133B05297EF920 /* Pods-Track.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)",
+					"\"${PODS_ROOT}/Headers/Public/AFNetworking\"",
+					"\"${PODS_ROOT}/Headers/Public\"/**",
+					"$(inherited)",
+				);
 				INFOPLIST_FILE = Track/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = UNH.ZheWu.Track;
@@ -378,10 +532,17 @@
 		};
 		D2ADCD2C1CD58EA200C57F8A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 37AF128108316463FC61FDF8 /* Pods-Track.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)",
+					"\"${PODS_ROOT}/Headers/Public/AFNetworking\"",
+					"\"${PODS_ROOT}/Headers/Public\"/**",
+					"$(inherited)",
+				);
 				INFOPLIST_FILE = Track/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = UNH.ZheWu.Track;

@@ -6,13 +6,13 @@
 //  Copyright © 2016 zhe wu. All rights reserved.
 //
 
-#import "settingViewController.h"
+#import "SettingViewController.h"
 
-@interface settingViewController ()
+@interface SettingViewController ()
 
 @end
 
-@implementation settingViewController
+@implementation SettingViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

@@ -5,8 +5,11 @@
 //  Created by zhe wu on 4/30/16.
 //  Copyright © 2016 zhe wu. All rights reserved.
 //
+//  RestKit and Core Data temp comes from https://medium.com/ios-os-x-development/restkit-tutorial-how-to-fetch-data-from-an-api-into-core-data-9326af750e10#.uav19p4qa
 
 #import "AppDelegate.h"
+#import <RestKit.h>
+
 
 @interface AppDelegate ()
 
@@ -16,8 +19,62 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
-
+    // Initialize RestKit
+    NSURL *baseURL = [NSURL URLWithString:@"https://api.goshippo.com/"];
+    RKObjectManager *objectManager = [RKObjectManager managerWithBaseURL:baseURL];
+    
+    // Initialize managed object model from bundle
+    NSManagedObjectModel *managedObjectModel = [NSManagedObjectModel mergedModelFromBundles:nil];
+    // Initialize managed object store
+    RKManagedObjectStore *managedObjectStore = [[RKManagedObjectStore alloc] initWithManagedObjectModel:managedObjectModel];
+    objectManager.managedObjectStore = managedObjectStore;
+    
+    // Complete Core Data stack initialization
+    [managedObjectStore createPersistentStoreCoordinator];
+    NSString *storePath = [RKApplicationDataDirectory() stringByAppendingPathComponent:@"Track.sqlite"];
+    NSString *seedPath = [[NSBundle mainBundle] pathForResource:@"RKSeedDatabase" ofType:@"sqlite"];
+    NSError *error;
+    NSPersistentStore *persistentStore = [managedObjectStore addSQLitePersistentStoreAtPath:storePath fromSeedDatabaseAtPath:seedPath withConfiguration:nil options:nil error:&error];
+    NSAssert(persistentStore, @"Failed to add persistent store with error: %@", error);
+    
+    // Create the managed object contexts
+    [managedObjectStore createManagedObjectContexts];
+    
+    // Configure a managed object cache to ensure we do not create duplicate objects
+    managedObjectStore.managedObjectCache = [[RKInMemoryManagedObjectCache alloc] initWithManagedObjectContext:managedObjectStore.persistentStoreManagedObjectContext];
+    
+    // Mapping from TrackInfo
+    RKEntityMapping *trackingListMapping = [RKEntityMapping mappingForEntityForName:@"TrackInfo" inManagedObjectStore:managedObjectStore];
+    trackingListMapping.identificationAttributes = @[@"tracking_number"];
+    [trackingListMapping addAttributeMappingsFromDictionary:@{
+                            @"tracking_number" :@"tracking_number",
+                            @"carrier" : @"carrier",
+                            @"eta" : @"eta"}];
+    
+    //Mapping from Address_from
+    RKEntityMapping *addressFromMapping = [RKEntityMapping mappingForEntityForName:@"Address_from" inManagedObjectStore:managedObjectStore];
+    [addressFromMapping addAttributeMappingsFromDictionary:@{
+                            @"city" :@"city",
+                            @"state" :@"state",
+                            @"zip" :@"zip",
+                            @"country" :@"country",}];
+    
+    //Mapping for the nested addressFromMapping to trackingListMapping
+    [trackingListMapping addPropertyMapping:[RKRelationshipMapping relationshipMappingFromKeyPath:@"address_from" toKeyPath:@"addressFrom" withMapping:addressFromMapping]];
+    
+    
+    RKResponseDescriptor *trackingListResponseDescriptor =
+    [RKResponseDescriptor responseDescriptorWithMapping:trackingListMapping
+                                                 method:RKRequestMethodGET
+                                            pathPattern:nil
+                                                keyPath:nil
+                                            statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)
+     ];
+    
+    [objectManager addResponseDescriptor:trackingListResponseDescriptor];
+    
+    // Enable Activity Indicator Spinner
+    [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
     
     return YES;
 }

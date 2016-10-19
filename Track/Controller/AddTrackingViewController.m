@@ -9,11 +9,12 @@
 #import "AddTrackingViewController.h"
 #import "MapViewController.h"
 #import <AVFoundation/AVFoundation.h>
-
-//#import <SVProgressHUD.h>
+#import <SVProgressHUD.h>
 #import "CoreDataStack.h"
 #import <CoreData/CoreData.h>
-#import "Track.h"
+#import <RestKit.h>
+#import "TrackInfo.h"
+
 
 
 @interface AddTrackingViewController () <UIPickerViewDataSource, UIPickerViewDelegate, AVCaptureMetadataOutputObjectsDelegate>
@@ -31,6 +32,8 @@
 @property (nonatomic, strong) AVCaptureVideoPreviewLayer *scanlayer;
 @property (weak, nonatomic) IBOutlet UITextField *trackingInput;
 @property (weak, nonatomic) IBOutlet UITextField *pickerText;
+
+@property NSArray *trackingArray;
 
 /** common */
 @property (nonatomic, strong) CoreDataStack *coreDataSrack;
@@ -57,6 +60,8 @@
     [picker setShowsSelectionIndicator:YES];
     [self.pickerText setInputView:picker];
     self.cancal.hidden = YES;
+    
+    [self requestData];
    
 }
 
@@ -130,7 +135,7 @@
         self.cancal.hidden = YES;
         
         [self.scanlayer removeFromSuperlayer];
-        AVMetadataMachineReadableCodeObject * metadataObject = [metadataObjects objectAtIndex : 0 ];
+        AVMetadataMachineReadableCodeObject * metadataObject = [metadataObjects objectAtIndex : 0];
         NSLog(@"%@",metadataObject.stringValue);
         self.trackingInput.text = metadataObject.stringValue;
         
@@ -160,22 +165,54 @@
 }
 
 - (IBAction)save {
-//    [SVProgressHUD show];
+    [SVProgressHUD show];
+    
+    self.coreDataSrack = [[CoreDataStack alloc] init];
+    NSManagedObject *object = [NSEntityDescription insertNewObjectForEntityForName:@"TrackNumber" inManagedObjectContext:self.coreDataSrack.managedObjectContext];
+    
+    self.trackingInput.text = @"1Z602F9A4246804081";
+    
+    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"TrackNumber"];
+    [request setPredicate:[NSPredicate predicateWithFormat:@"trackingNumber = %@", @"1Z602F9A4246804081"]];
+    
+    NSUInteger count = [self.coreDataSrack.managedObjectContext countForFetchRequest:request error:nil];
+    if (count) {
+        NSLog(@"found");
+    }else {
+        [object setValue:self.trackingInput.text forKey:@"trackingNumber"];
+        NSLog(@"save into core data");
+        NSError *error;
+        if ([self.coreDataSrack.managedObjectContext save:&error] == NO){
+            NSAssert(NO, @"Error saving context: %@\n%@", [error localizedDescription], [error userInfo]);
+        } else
+        {
+            NSLog(@"success");
+        }
+    }
+     NSLog(@"---");
+
+    
+    NSError *error2 = nil;
+    NSArray *results = [self.coreDataSrack.managedObjectContext executeFetchRequest:request error:&error2];
+    if (!results) {
+        NSLog(@"Error fetching Employee objects: %@\n%@", [error2 localizedDescription], [error2 userInfo]);
+        abort();
+    }else {
+        NSLog(@"trackingNumber = %@", results);
+    }
+    
+    NSLog(@"----");
+    NSString *t = [results valueForKey:@"trackingNumber"];
+    NSLog(@"t=%@", t);
+    
+     NSLog(@"---");
 //    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-//    [manager GET:@"https://api.goshippo.com/v1/tracks/ups/1Z602F9A4246804081" parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
-//        
+//    [manager GET:@"https://api.goshippo.com/v1/tracks/ups/1Z602F9A4246804081" parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+//        [SVProgressHUD show];
+//    
 //        self.coreDataSrack = [[CoreDataStack alloc] init];
-//        
-//        
-//        NSManagedObject *object = [NSEntityDescription insertNewObjectForEntityForName:@"TrackNumber" inManagedObjectContext:self.coreDataSrack.managedObjectContext];
-//        [object setValue:responseObject forKey:@"trackingData"];
-//        
-//        NSLog(@"----");
-//        NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"TrackNumber"];
-//        NSLog(@"NSFetchRequest====%@", request);
 //        [SVProgressHUD dismiss];
-//        
-//    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+//    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
 //        NSLog(@"faile");
 //    }];
     
@@ -259,6 +296,41 @@
 -(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
 {
     self.pickerText.text = [carrierArray objectAtIndex:row];
+}
+
+
+#pragma mark RESTKit
+
+- (void)requestData
+{
+    NSString *requestPath = @"/v1/tracks/ups/1Z1A00R20204584514";
+    [[RKObjectManager sharedManager] getObjectsAtPath:requestPath parameters:nil success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
+        [self fetchTrackInfoFromContext];
+    } failure:^(RKObjectRequestOperation *operation, NSError *error) {
+
+    }];
+}
+
+
+- (void)fetchTrackInfoFromContext
+{
+    NSManagedObjectContext *context = [RKManagedObjectStore defaultStore].mainQueueManagedObjectContext;
+    NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"TrackInfo"];
+    NSError *error = nil;
+    NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
+    
+    for (NSInteger i = 0; i < fetchedObjects.count; i++) {
+        TrackInfo *trackInfo = fetchedObjects[i];
+       
+ 
+        NSLog(@"trackInfo.tracking_number---%@", trackInfo.tracking_number);
+        NSLog(@"trackInfo.carrier-----%@", trackInfo.carrier);
+        NSLog(@"eta----%@", trackInfo.eta);
+        NSLog(@"trackInfo.addressFrom----%@", trackInfo.addressFrom.city);
+        NSLog(@"trackInfo.addressFrom----%@", trackInfo.addressFrom.country);
+        NSLog(@"trackInfo.addressFrom----%@", trackInfo.addressFrom.zip);
+        NSLog(@"trackInfo.addressFrom----%@", trackInfo.addressFrom.state);
+    }
 }
 
 

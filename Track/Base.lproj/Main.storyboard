@@ -211,7 +211,7 @@
         <!--Setting View Controller-->
         <scene sceneID="gBV-FT-rdK">
             <objects>
-                <viewController storyboardIdentifier="sc" id="Swe-8d-DHy" customClass="settingViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="sc" id="Swe-8d-DHy" customClass="SettingViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="l08-gp-FDW"/>
                         <viewControllerLayoutGuide type="bottom" id="r9Y-8j-cML"/>
@@ -262,7 +262,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Done"/>
                                 <connections>
-                                    <action selector="done:" destination="Swe-8d-DHy" eventType="touchUpInside" id="0uo-dF-pE4"/>
+                                    <action selector="done:" destination="Swe-8d-DHy" eventType="touchUpInside" id="d2W-bY-54A"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -276,7 +276,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mPt-x0-jHE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-407" y="672"/>
+            <point key="canvasLocation" x="-526" y="788"/>
         </scene>
         <!--Add Tracking View Controller-->
         <scene sceneID="81y-k7-gad">

@@ -1,5 +1,5 @@
 //
-//  ViewController.m
+//  TrackingTableViewController.m
 //  Track
 //
 //  Created by zhe wu on 4/30/16.
@@ -32,7 +32,7 @@
     
     //register reused cell
     [self.tableView registerClass:[TrackingTableViewCell class] forCellReuseIdentifier:@"cell"];
-   
+ 
 }
 
 /**
@@ -51,7 +51,7 @@
  *  @param sender leftBarButtonItem
  */
 - (IBAction)setting:(UIBarButtonItem *)sender {
-    settingViewController *settingView = [self.storyboard instantiateViewControllerWithIdentifier:@"sc"];
+    SettingViewController *settingView = [self.storyboard instantiateViewControllerWithIdentifier:@"sc"];
     //    settingView.view.frame = self.view.bounds;
     //    settingView.view.backgroundColor = [UIColor redColor];
     [self.navigationController presentViewController:settingView animated:YES completion:nil];

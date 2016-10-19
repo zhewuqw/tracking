@@ -1,14 +1,14 @@
 //
-//  Track.m
+//  Location.m
 //  Track
 //
-//  Created by zhe wu on 10/17/16.
+//  Created by zhe wu on 10/19/16.
 //  Copyright © 2016 zhe wu. All rights reserved.
 //
 
-#import "Track.h"
+#import "Location.h"
 
-@implementation Track
+@implementation Location
 
 // Insert code here to add functionality to your managed object subclass
 
